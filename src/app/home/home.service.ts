@@ -13,6 +13,22 @@ export class HomeService {
     {
       idPulau:'2',
       nama:'Sumatra'
+    },
+    {
+      idPulau:'3',
+      nama:'Bali & NTT'
+    },
+    {
+      idPulau:'4',
+      nama:'Kalimantan'
+    },
+    {
+      idPulau:'5',
+      nama:'Sulawesi'
+    },
+    {
+      idPulau:'6',
+      nama:'Papua'
     }
   ];
   constructor() { }

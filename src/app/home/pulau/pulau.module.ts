@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PagePulauPageRoutingModule } from './page-pulau-routing.module';
+import { PulauPageRoutingModule } from './pulau-routing.module';
 
-import { PagePulauPage } from './page-pulau.page';
+import { PulauPage } from './pulau.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagePulauPageRoutingModule
+    PulauPageRoutingModule
   ],
-  declarations: [PagePulauPage]
+  declarations: [PulauPage]
 })
-export class PagePulauPageModule {}
+export class PulauPageModule {}

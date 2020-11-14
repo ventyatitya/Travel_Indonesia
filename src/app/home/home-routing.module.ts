@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: ':idPulau',
-    loadChildren: () => import('./page-pulau/page-pulau.module').then( m => m.PagePulauPageModule)
+    loadChildren: () => import('./pulau/pulau.module').then( m => m.PulauPageModule)
   }
 ];
 
