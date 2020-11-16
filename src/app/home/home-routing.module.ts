@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  },
-  {
-    path: ':idPulau',
-    loadChildren: () => import('./pulau/pulau.module').then( m => m.PulauPageModule)
   }
 ];
 

@@ -1,20 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { pulau } from '../daerah.model';
-import { HomeService } from './home.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
-  pulau:pulau[];
-  constructor(private homeService: HomeService) {
-  }
-
-  ngOnInit(){
-    this.pulau = this.homeService.getAllPulau();
-  }
+  constructor() {}
 
 }
