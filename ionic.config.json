@@ -1,7 +1,0 @@
-{
-  "name": "Travel",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
