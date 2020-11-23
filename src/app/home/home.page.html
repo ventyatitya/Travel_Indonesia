@@ -1,20 +1,15 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Home
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <p>As the Largest archipelagic country in the world. Indonesia is blessed with so many differen people, cultures, custom, traditions, artworks, food, animals, plants and landscapes</p>
+    <ion-title>Where Are You Going?</ion-title>
+    <ion-list>
+        <ion-button *ngFor="let pulau of pulau" [routerLink]="['./',pulau.pulauId]">{{pulau.nama}}</ion-button>
+    </ion-list>
 </ion-content>

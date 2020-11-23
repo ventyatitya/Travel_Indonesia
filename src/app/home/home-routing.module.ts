@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+  },
+  {
+    path: ':pulauId',
+    loadChildren: () => import('./pulau/prov.module').then( m => m.ProvPageModule)
   }
 ];
 

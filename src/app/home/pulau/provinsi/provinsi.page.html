@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home/."></ion-back-button>
+        </ion-buttons>
+        <ion-title>What's On {{loaded.nama}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <p>{{loaded.desc}}</p>
+    <ion-list>
+        <ion-item>
+            <ion-button routerLink="./foods">
+                Foods
+            </ion-button>
+            <ion-button routerLink="./attractions">
+                Places
+            </ion-button>
+            <ion-button routerLink="./arts">
+                Arts
+            </ion-button>
+        </ion-item>
+    </ion-list>
+    <ion-title>
+        Discover More
+    </ion-title>
+    <ion-list>
+        <ion-item>
+            <ion-button *ngFor="let allProf of allProf">
+                {{allProv.nama}}
+            </ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
