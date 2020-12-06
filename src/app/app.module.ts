@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/firebase.app.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,4 +22,4 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -3,28 +3,48 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/home/."></ion-back-button>
         </ion-buttons>
-        <ion-title>What's On {{loaded.nama}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <p>{{loaded.desc}}</p>
-    <ion-list>
-        <ion-item>
-            <ion-button routerLink="./foods">
-                Foods
-            </ion-button>
-            <ion-button routerLink="./attractions">
-                Places
-            </ion-button>
-            <ion-button routerLink="./arts">
-                Arts
-            </ion-button>
-        </ion-item>
-    </ion-list>
-    <ion-title>
+    <p style="text-align:center">What's On {{loaded.nama}} ?</p>
+    <ion-card>
+        <ion-img [src]="loaded.imageUrl"> </ion-img>
+        <ion-card-content>
+            {{loaded.desc}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-grid>
+        <ion-row>
+            <ng-container>
+                <ion-col size="4">
+                    <img src="../../../assets/foods.png" routerLink="./foods">
+                    <ion-label>
+                        Foods
+                    </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                    <img src="../../../assets/places.png" routerLink="./attractions">
+                    <ion-label>
+                        Places
+                    </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                    <img src="../../../assets/arts.png" routerLink="./arts">
+                    <ion-label>
+                        Arts
+                    </ion-label>
+                </ion-col>
+            </ng-container>
+        </ion-row>
+    </ion-grid>
+
+    <p>
+
         Discover More
-    </ion-title>
+    </p>
+    <!--
     <ion-list>
         <ion-item>
             <ion-button *ngFor="let allProf of allProf">
@@ -32,4 +52,5 @@
             </ion-button>
         </ion-item>
     </ion-list>
+    -->
 </ion-content>

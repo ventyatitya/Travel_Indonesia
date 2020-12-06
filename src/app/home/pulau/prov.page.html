@@ -3,20 +3,23 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/home"></ion-back-button>
         </ion-buttons>
-        <ion-title>Discover {{loaded.nama}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <p>Discover {{loaded.nama}}</p>
     <ion-searchbar placeholder="Find out Your Destination"></ion-searchbar>
-    <ion-list>
-        <ion-item *ngFor="let prov of prov">
-            <ion-button *ngIf="prov.pulauId === loaded.pulauId" [routerLink]="['./',prov.provId]">{{prov.nama}}</ion-button>
-        </ion-item>
-    </ion-list>
-    <ion-title>Popular Attraction</ion-title>
-    <ion-title>See Beauty on Another Island</ion-title>
-    <ion-list>
-        <ion-button *ngFor="let pulau of pulau" [routerLink]="[pulau.pulauId]">{{pulau.nama}}</ion-button>
-    </ion-list>
+    <p>By Provinces</p>
+    <ion-slides [options]="sliderConfig">
+        <ion-slide *ngFor="let prov of prov">
+            <ion-card *ngIf="prov.pulauId === loaded.pulauId" [routerLink]="['./',prov.provId]">
+                <ion-card-content>
+                    <ion-img [src]="prov.imageUrl"> </ion-img>
+                    {{prov.nama}}
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+    <p>Popular Attraction</p>
+    <p>See Beauty on Another Island</p>
 </ion-content>

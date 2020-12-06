@@ -9,22 +9,27 @@ import { provinsi, pulau } from '../pulau';
   styleUrls: ['./prov.page.scss'],
 })
 export class ProvPage implements OnInit {
-  loaded:pulau;
-  prov:provinsi[];
-  pulau:pulau[];
+  loaded: pulau;
+  prov: provinsi[];
+  pulau: pulau[];
   constructor(
-    private activatedRoute:ActivatedRoute,
-    private mainSrv:MainService,
-    private router:Router
+    private activatedRoute: ActivatedRoute,
+    private mainSrv: MainService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe(paramMap=>{
-      if(!paramMap.has('pulauId')){return;}
+    this.activatedRoute.paramMap.subscribe(paramMap => {
+      if (!paramMap.has('pulauId')) { return; }
       const id = paramMap.get('pulauId');
       this.loaded = this.mainSrv.getPulau(id);
       this.prov = this.mainSrv.getAllProv();
     });
   }
 
+  sliderConfig = {
+    spaceBetween: 12,
+    slidesPerView: 1.6
+  }
 }
+
